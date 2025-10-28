@@ -1,11 +1,11 @@
-# 🧮 TDE – Comparativo de Algoritmos de Ordenação
+#  TDE – Comparativo de Algoritmos de Ordenação
 
-## 👩‍💻 Feito por:
+##  Feito por:
 - **Sophia Ploposki**
 
 ---
 
-## 📘 Descrição do Projeto
+##  Descrição do Projeto
 
 Este trabalho tem como objetivo **implementar e comparar o desempenho** de seis algoritmos de ordenação clássicos e alternativos, sendo eles:
 
@@ -22,7 +22,7 @@ A implementação foi feita **sem uso de funções prontas de ordenação**, seg
 
 ---
 
-## 🧩 Estrutura do Projeto
+##  Estrutura do Projeto
 
 ```
 src/
@@ -38,20 +38,17 @@ src/
 
 ---
 
-## 🧠 Algoritmos Implementados
-
-| Algoritmo | Descrição |
-|------------|------------|
-| **Comb Sort** | Uma versão aprimorada do Bubble Sort que elimina o problema das “tartarugas” (valores pequenos no final) utilizando gaps decrescentes. |
-| **Gnome Sort** | Baseado na ideia de “reorganizar flores no jardim”, compara e retrocede elementos fora de ordem. Simples, mas pouco eficiente. |
-| **Bucket Sort** | Distribui os elementos em “baldes”, que são ordenados individualmente, e depois concatenados. Ideal para números distribuídos uniformemente. |
-| **Bubble Sort (flag)** | Versão otimizada do Bubble Sort que para quando o vetor já está ordenado. |
-| **Selection Sort** | Seleciona o menor elemento e o coloca na posição correta a cada iteração. |
-| **Cocktail Sort** | Versão bidirecional do Bubble Sort: ordena da esquerda para direita e depois da direita para esquerda. |
+## Algoritmos Implementados
+- Comb Sort
+- Gnome Sort
+- Bucket Sort
+- Bubble Sort (com flag de parada)
+- Selection Sort
+- Cocktail Sort
 
 ---
 
-## 📊 Vetores Utilizados
+## Vetores Utilizados
 
 ```java
 int[] vetor1 = {12, 18, 9, 25, 17, 31, 22, 27, 16, 13, 19, 23, 20, 30, 14, 11, 15, 24, 26, 28};
@@ -59,66 +56,62 @@ int[] vetor2 = {5, 7, 9, 10, 12, 14, 15, 17, 19, 21, 22, 23, 24, 25, 27, 28, 29,
 int[] vetor3 = {99, 85, 73, 60, 50, 40, 35, 30, 25, 20, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6};
 ```
 
-- **Vetor 1:** aleatório  
-- **Vetor 2:** já ordenado (melhor caso para algoritmos com flag)  
-- **Vetor 3:** inversamente ordenado (pior caso para algoritmos simples)
+---
+
+## Resultados Obtidos
+
+### Comb Sort  
+Vetor ordenado: [9, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 23, 24, 25, 26, 27, 28, 30, 31]  
+Trocas: 22  
+Interações: 129  
+Tempo (ns): 220291  
+
+### Gnome Sort  
+Vetor ordenado: [9, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 23, 24, 25, 26, 27, 28, 30, 31]  
+Trocas: 78  
+Interações: 174  
+Tempo (ns): 339916  
+
+### Bucket Sort  
+Vetor ordenado: [9, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 23, 24, 25, 26, 27, 28, 30, 31]  
+Trocas: 22  
+Interações: 91  
+Tempo (ns): 504958  
+
+### Bubble Sort (flag)  
+Vetor ordenado: [9, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 23, 24, 25, 26, 27, 28, 30, 31]  
+Trocas: 78  
+Interações: 180  
+Tempo (ns): 8042  
+
+### Selection Sort  
+Vetor ordenado: [9, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 23, 24, 25, 26, 27, 28, 30, 31]  
+Trocas: 18  
+Interações: 190  
+Tempo (ns): 241042  
+
+### Cocktail Sort  
+Vetor ordenado: [9, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 23, 24, 25, 26, 27, 28, 30, 31]  
+Trocas: 78  
+Interações: 154  
+Tempo (ns): 251875  
 
 ---
 
-## ⚙️ Resultados Obtidos
+## Comparativo de Desempenho
 
-*(Preencha com os dados após rodar o programa no terminal)*
-
-### 🔁 Tabela de Iterações
-
-| Algoritmo           | Vetor 1 | Vetor 2 | Vetor 3 |
-|----------------------|---------|---------|---------|
-| Comb Sort            |         |         |         |
-| Gnome Sort           |         |         |         |
-| Bucket Sort          |         |         |         |
-| Bubble Sort (flag)   |         |         |         |
-| Selection Sort       |         |         |         |
-| Cocktail Sort        |         |         |         |
+| Algoritmo         | Trocas | IteraÃ§Ãµes | Tempo (ns) | Melhor em |
+|-------------------|---------|------------|-------------|------------|
+| Selection Sort    | 18      | 190        | 241042      | Menos trocas |
+| Bucket Sort       | 22      | 91         | 504958      | Menos interações |
+| Bubble Sort (flag)| 78      | 180        | 8042        | Tempo mais rápido |
+| Comb Sort         | 22      | 129        | 220291      |  |
+| Gnome Sort        | 78      | 174        | 339916      |  |
+| Cocktail Sort     | 78      | 154        | 251875      |  |
 
 ---
 
-### 🔄 Tabela de Trocas
-
-| Algoritmo           | Vetor 1 | Vetor 2 | Vetor 3 |
-|----------------------|---------|---------|---------|
-| Comb Sort            |         |         |         |
-| Gnome Sort           |         |         |         |
-| Bucket Sort          |         |         |         |
-| Bubble Sort (flag)   |         |         |         |
-| Selection Sort       |         |         |         |
-| Cocktail Sort        |         |         |         |
-
----
-
-### ⏱️ Tempo de Execução (ns)
-
-| Algoritmo           | Vetor 1 | Vetor 2 | Vetor 3 |
-|----------------------|---------|---------|---------|
-| Comb Sort            |         |         |         |
-| Gnome Sort           |         |         |         |
-| Bucket Sort          |         |         |         |
-| Bubble Sort (flag)   |         |         |         |
-| Selection Sort       |         |         |         |
-| Cocktail Sort        |         |         |         |
-
----
-
-## 🏆 Ranking Final
-
-| Categoria | 1º Lugar | 2º | 3º | 4º | 5º | 6º |
-|------------|-----------|-----|-----|-----|-----|-----|
-| Menos Trocas |           |     |     |     |     |     |
-| Menos Iterações |         |     |     |     |     |     |
-| Melhor Tempo |             |     |     |     |     |     |
-
----
-
-## 🧾 Conclusão
+##  Conclusão
 
 Após a execução dos testes com os três vetores, foi possível observar diferenças significativas entre os algoritmos.  
 

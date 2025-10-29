@@ -1,7 +1,9 @@
 #  TDE – Ordenação
-
-##  Feito por:
-- **Sophia Ploposki**
+- **Disciplina:** Resolução de Problemas Estruturados em Computação.
+- **Instituição:** Pontifícia Universidade Católica do Paraná.
+- **Professor:** Andrey Cabral Meira.
+- **Aluna:**
+  -  Sophia Post Ploposki.
 
 ---
 
